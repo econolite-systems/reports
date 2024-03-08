@@ -1,0 +1,50 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+<!-- SPDX-License-Identifier: MIT -->
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+        <RootNamespace>Econolite.Ode.Api.Reports</RootNamespace>
+    <Copyright>2023-&lt;&lt;CURRENT_YEAR&gt;&gt; Econolite Systems, Inc.</Copyright>
+</PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+      <DocumentationFile>bin\Debug\net6.0\Api.Reports.xml</DocumentationFile>
+</PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="AspNetCore.HealthChecks.Prometheus.Metrics" Version="6.0.2" />
+        <PackageReference Include="AspNetCore.HealthChecks.System" Version="6.0.5" />
+        <PackageReference Include="AspNetCore.HealthChecks.UI.Client" Version="6.0.5" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\audit\Models.AuditReport\Models.AuditReport.csproj" />
+        <ProjectReference Include="..\audit\Repository.AuditReport\Repository.AuditReport.csproj" />
+        <ProjectReference Include="..\audit\Services.AuditReport\Services.AuditReport.csproj" />
+        <ProjectReference Include="$(SolutionDir)\common\Auditing\Auditing.csproj" />
+        <ProjectReference Include="$(SolutionDir)\common\Authorization\Authorization.csproj" />
+        <ProjectReference Include="$(SolutionDir)\common\Extensions\Extensions.csproj" />
+        <ProjectReference Include="$(SolutionDir)\common\Extensions.AspNet\Extensions.AspNet.csproj" />
+        <ProjectReference Include="$(SolutionDir)\common\Monitoring.AspNet\Monitoring.AspNet.csproj" />
+        <ProjectReference Include="$(SolutionDir)\common\Monitoring.HealthChecks.Kafka\Monitoring.HealthChecks.Kafka.csproj" />
+        <ProjectReference Include="$(SolutionDir)\common\Monitoring.HealthChecks.Mongo\Monitoring.HealthChecks.Mongo.csproj" />
+        <ProjectReference Include="$(SolutionDir)\connected-vehicle\Services.ConnectedVehicle\Services.ConnectedVehicle.csproj" />
+        <ProjectReference Include="$(SolutionDir)\ess\Service.ESS\Services.Ess.csproj" />
+        <ProjectReference Include="$(SolutionDir)\event-logger\Services.EventLogger\Services.EventLogger.csproj" />
+        <ProjectReference Include="$(SolutionDir)\logging\Repository.Logging\Repository.Logging.csproj" />
+        <ProjectReference Include="$(SolutionDir)\pavement-condition\Repository.PavementCondition\Repository.PavementCondition.csproj" />
+        <ProjectReference Include="$(SolutionDir)\pavement-condition\Services.PavementCondition\Services.PavementCondition.csproj" />
+        <ProjectReference Include="$(SolutionDir)\rsu\Domain.Rsu\Domain.Rsu.csproj" />
+        <ProjectReference Include="$(SolutionDir)\rsu\Status.Rsu\Service.Rsu.Status.csproj" />
+        <ProjectReference Include="$(SolutionDir)\tim\Repository.TimService\Repository.TimService.csproj" />
+        <ProjectReference Include="$(SolutionDir)\users\Repository.Users\Repository.Users.csproj" />
+        <ProjectReference Include="$(SolutionDir)\weather-responsive\Weather\Services.WeatherResponsive\Services.WeatherResponsive.csproj" />
+        <ProjectReference Include="$(SolutionDir)\wrong-way-driver\Repository.WrongWayDriver\Repository.WrongWayDriver.csproj" />
+        <ProjectReference Include="$(SolutionDir)\wrong-way-driver\Services.WrongWayDriver\Services.WrongWayDriver.csproj" />
+    </ItemGroup>
+
+</Project>

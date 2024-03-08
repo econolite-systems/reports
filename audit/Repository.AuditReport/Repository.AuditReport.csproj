@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+<!-- SPDX-License-Identifier: MIT -->
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>Econolite.Ode.$(MSBuildProjectName)</AssemblyName>
+    <RootNamespace>Econolite.Ode.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
+  <Copyright>2023 Econolite Systems, Inc.</Copyright>
+</PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="$(SolutionDir)\audit\Models.AuditReport\Models.AuditReport.csproj" />
+    <ProjectReference Include="$(SolutionDir)\common\Auditing\Auditing.csproj" />
+    <ProjectReference Include="$(SolutionDir)\common\Persistence.Mongo\Persistence.Mongo.csproj" />
+    <ProjectReference Include="$(SolutionDir)\users\Models.Users\Models.Users.csproj" />
+    <ProjectReference Include="$(SolutionDir)\users\Repository.Users\Repository.Users.csproj" />
+  </ItemGroup>
+
+</Project>

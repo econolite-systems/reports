@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+<!-- SPDX-License-Identifier: MIT -->
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>Econolite.Ode.$(MSBuildProjectName)</AssemblyName>
+    <RootNamespace>Econolite.Ode.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
+  <Copyright>2023 Econolite Systems, Inc.</Copyright>
+</PropertyGroup>
+
+</Project>
