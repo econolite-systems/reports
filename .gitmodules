@@ -1,0 +1,42 @@
+[submodule "config"]
+	path = config
+	url = ../config
+[submodule "connected-vehicle"]
+	path = connected-vehicle
+	url = ../connected-vehicle
+[submodule "ess"]
+	path = ess
+	url = ../ess
+[submodule "tim"]
+	path = tim
+	url = ../tim
+[submodule "pavement-condition"]
+	path = pavement-condition
+	url = ../pavement-condition
+[submodule "device-manager"]
+	path = device-manager
+	url = ../device-manager
+[submodule "entities"]
+	path = entities
+	url = ../entities
+[submodule "weather-responsive"]
+	path = weather-responsive
+	url = ../weather-responsive
+[submodule "vehicle-priority"]
+	path = vehicle-priority
+	url = ../vehicle-priority
+[submodule "wrong-way-driver"]
+	path = wrong-way-driver
+	url = ../wrong-way-driver
+[submodule "status"]
+	path = status
+	url = ../status
+[submodule "event-logger"]
+	path = event-logger
+	url = ../event-logger
+[submodule "rsu"]
+	path = rsu
+	url = ../rsu
+[submodule "common"]
+	path = common
+	url = ../common
